@@ -35,6 +35,24 @@ you don’t need to build the stuff that you think are "what if we need this fea
 Another option is to go Hybrid
 Folders for feature and then by type?
 
+## Data Patterns
+Separation of concerns(Single responsibility principle)
+
+Controllers defer data calls to a data service/ factory
+All data/XHR is isolated
+like it should be SomeService.getData() within controller instead of making call
+your controller will become easily testable
+Reusable
+
+use $http for XHR calls or run Digest cycle once you done using some other method
+
+## Use Decorators
+Decorate the $exceptionHandler Service
+commonEH.config([‘$provide’, function ($provide) {
+  $provide.decorator(‘$exceptionHandler’, [‘$delegate’, ‘$exceptionConfig’, ‘logger’, extendExceptionHandler]);
+}])
+
+
 
 ## Resources used to collect this
 1. John Papa - 10 AngularJS Patterns - Code on the Beach 2014
