@@ -54,6 +54,10 @@ commonEH.config([‘$provide’, function ($provide) {
 
 
 
+## Misc
+#### Clean up functions
+Consider defining clean-up function by registering an event, element.on( ‘$destroy’, …). It is a good practice to remove event listeners once the ‘$destroy’ event is broadcasted, to avoid instances of memory leaks. Listeners registered to scopes and elements are automatically cleaned up when they are destroyed.
+
 ## Resources used to collect this
 1. John Papa - 10 AngularJS Patterns - Code on the Beach 2014
 Link: https://www.youtube.com/watch?v=UlvCbnKAH3g
