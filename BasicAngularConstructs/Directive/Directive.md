@@ -6,3 +6,6 @@ They are markers on DOM elements, like attribute, element name, comment or CSS c
 
 few Built-in directives
 ng-bind, ng-model, ng-class.
+
+ways to write in html
+ng-model or data-ng-model
